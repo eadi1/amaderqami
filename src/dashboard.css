@@ -1,0 +1,68 @@
+.dashboard-container {
+  padding: 20px;
+  background: linear-gradient(to bottom, #f1f8e9, #ffffff);
+  min-height: 100vh;
+  font-family: "SolaimanLipi", sans-serif;
+}
+
+.dashboard-title {
+  text-align: center;
+  color: #1b5e20;
+  margin-bottom: 25px;
+}
+
+.section-title {
+  margin: 25px 0 15px;
+  color: #2e7d32;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+/* 🔹 Islamic Card */
+.islamic-card {
+  background: linear-gradient(135deg, #1b5e20, #4caf50);
+  color: #fff;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.islamic-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h4 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.card-icon {
+  font-size: 24px;
+  opacity: 0.9;
+}
+
+.card-value {
+  font-size: 22px;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+/* 🔹 Chart Card */
+.chart-card {
+  margin-top: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}

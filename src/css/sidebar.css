@@ -1,0 +1,134 @@
+/* ------------------ Sidebar ------------------ */
+.sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: #263043;
+  overflow-y: auto;
+  transition: transform 0.4s ease;
+  transform: translateX(0); /* 🔥 KEY LINE */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  z-index: 1000;
+}
+
+
+/* Sidebar Title */
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-brand {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.close_icon {
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+}
+
+/* Sidebar Menu List */
+.sidebar-list {
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-list-item {
+  padding: 15px 20px;
+  font-size: 16px;
+  color: #9e9ea4;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #00bfff;
+}
+
+.sidebar-list-item a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-list-item.active {
+  background-color: rgba(0,191,255,0.2);
+  color: #00bfff;
+  border-left: 4px solid #00bfff;
+  box-shadow: 0 0 15px rgba(0,191,255,0.3);
+  border-radius: 0 12px 12px 0;
+}
+
+.sidebar-list-item a svg {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-list-item:hover a svg {
+  transform: scale(1.2) rotate(10deg);
+  color: #00bfff;
+}
+
+/* Sidebar Responsive */
+.sidebar-responsive {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background-color: #263043;
+ 
+  display: block;
+}
+
+
+
+#sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.menu-btn{
+  display: none;
+}
+#sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+@media screen and (max-width: 992px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* Small Screen */
+@media screen and (max-width: 992px) {
+  .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+    top: 60px;
+    left: 0;
+  }
+ .sidebar.sidebar-responsive {
+  transform: translateX(0);
+}
+.menu-btn{
+  display: inline;
+}
+  .close_icon {
+    display: inline;
+  }
+}

@@ -1,0 +1,136 @@
+/* ------------------ Header ------------------ */
+.header {
+  grid-area: header;
+  height: 60px;
+  background-color: #1f2633;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.header-left, .header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header .icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+    pointer-events: auto; /* 🔥 */
+  z-index: 10000;
+}
+.menu-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+
+.header .icon:hover {
+  color: #00bfff;
+  transform: scale(1.2);
+}
+/* Register custom font */
+@font-face {
+  font-family: "Amiri-Regular";
+  src: url("fonts/Amiri-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use it for the header-center */
+.header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-family: "Amiri-Regular", sans-serif; /* fallback to sans-serif */
+  text-align: center;
+  white-space: nowrap;
+  font-size: clamp(16px, 3vw, 24px); /* Responsive */
+}
+
+
+.btn-back {
+  background-color: #00bfff;
+  border: none;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-back:hover {
+  background-color: #0095d1;
+}
+
+/* Profile Picture */
+.header-profile-picture {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Calculator Popup */
+.calculator-popup {
+  width: 200px;
+  background-color: #1f2633;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  padding: 10px;
+  user-select: none;
+}
+
+.calculator-popup input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  text-align: right;
+  font-size: 16px;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+
+.calculator-buttons button {
+  padding: 8px;
+  background-color: #2a3344;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.calculator-buttons button:hover {
+  background-color: #00bfff;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Sync icon animation */
+.syncing {
+  animation: rotateSync 1s linear infinite;
+}
+
+@keyframes rotateSync {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

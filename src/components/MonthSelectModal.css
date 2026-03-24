@@ -1,0 +1,164 @@
+/* =========================
+   MODAL OVERLAY
+========================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* =========================
+   MODAL CARD
+========================= */
+.modal {
+  position: relative;
+  width: 460px;
+  max-width: 92%;
+  
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow:
+    0 20px 35px rgba(0, 0, 0, 0.15),
+    0 8px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+
+.modal-content {
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   MODAL HEADER
+========================= */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 3;
+}
+
+.modal h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+.modal-close {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #f70505;
+  position: relative;
+  z-index: 4;
+}
+
+.modal-close:hover {
+  color: #df0ec3;
+   background: transparent;
+  border: none;
+}
+
+/* =========================
+   FORM ROW (LABEL LEFT / INPUT RIGHT)
+========================= */
+.modal-form-row {
+  display: grid;
+  grid-template-columns: 34% 66%;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.modal-form-row label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.modal-form-row input,
+.modal-form-row select,
+.modal-form-row textarea {
+ max-width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+  background: #52515100;
+}
+
+.modal-form-row input:focus,
+.modal-form-row select:focus,
+.modal-form-row textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+
+.modal-form-row textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.btn {
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-save {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.btn-save:hover {
+  background: #1e40af;
+}
+
+.btn-cancel {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.btn-cancel:hover {
+  background: #e5e7eb;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 520px) {
+  .modal-form-row {
+    grid-template-columns: 100%;
+  }
+
+  .modal-form-row label {
+    margin-bottom: 4px;
+  }
+}

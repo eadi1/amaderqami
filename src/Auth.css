@@ -1,0 +1,120 @@
+.auth {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* একটি উজ্জ্বল এবং প্রফেশনাল গ্রিন গ্রেডিয়েন্ট */
+  background: linear-gradient(135deg, #80ea66 0%, #06af14 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+.app {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px; /* একটু বেশি রাউন্ডেড লুকের জন্য */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  color: #1a4d1a; /* ডার্ক গ্রিন টাইটেল */
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form input {
+  padding: 14px 15px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* ফোকাস করলে বর্ডার কালার গ্রিন হবে */
+.form input:focus {
+  border-color: #06af14;
+  box-shadow: 0 0 8px rgba(6, 175, 20, 0.1);
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 14px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+}
+
+button {
+  background: #06af14; /* সলিড গ্রিন বাটন */
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #059611;
+  transform: translateY(-1px); /* হোভার করলে হালকা উপরে উঠবে */
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  background: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.toggle-link {
+  margin-top: 20px;
+  color: #06af14; /* লিংক কালার গ্রিন */
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+  color: #047a0d;
+}
+
+/* ফাইল ইনপুট ডিজাইন */
+input[type="file"] {
+  border: 1.5px dashed #06af14;
+  background: #f1faf1;
+  color: #444;
+}
+
+.image-preview {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px auto;
+  border: 3px solid #06af14;
+  padding: 2px;
+}

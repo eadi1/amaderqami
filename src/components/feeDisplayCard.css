@@ -1,0 +1,49 @@
+.fee-display-card {
+  background: #0f172a;
+  border-radius: 12px;
+  padding: 14px;
+  width: 260px;
+  color: #e5e7eb;
+  border: 1px solid #1e293b;
+}
+
+.fee-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #facc15;
+  margin-bottom: 8px;
+  border-bottom: 1px dashed #334155;
+  padding-bottom: 5px;
+}
+
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.fee-month {
+  color: #cbd5f5;
+}
+
+.fee-amount {
+  font-weight: bold;
+}
+
+.fee-amount.paid {
+  color: #22c55e;
+}
+
+.fee-amount.due {
+  color: #ef4444;
+}
+.fee-total {
+  border-top: 1px dashed #334155;
+  padding-top: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}

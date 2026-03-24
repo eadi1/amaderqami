@@ -1,0 +1,230 @@
+.fields-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.field-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+h2 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.form-preview {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #2980b9;
+}
+
+.preview {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.preview img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.loading {
+  color: #e67e22;
+  font-weight: bold;
+}
+.niyog-preview {
+  border: 2px solid #333;
+  padding: 20px;
+  margin-top: 20px;
+  font-family: 'SolaimanLipi', Arial, sans-serif;
+  background-color: #fdfdfd;
+}
+
+.niyog-preview .header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.niyog-preview .preview-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.niyog-preview .teacher-picture img,
+.niyog-preview .nid-preview img {
+  width: 150px;
+  height: 180px;
+  object-fit: cover;
+  border: 1px solid #333;
+}
+
+.niyog-preview .placeholder {
+  width: 150px;
+  height: 180px;
+  border: 1px dashed #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+.niyog-preview .preview-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.niyog-preview .preview-table td {
+  border: 1px solid #333;
+  padding: 8px;
+}
+
+.niyog-preview .preview-table tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+/* TeacherView.css */
+
+/* General CV-style */
+.cv-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.cv-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Card header */
+.cv-card h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-bottom: 2px solid #e5e7eb; /* light gray */
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #111827; /* dark gray */
+}
+
+/* Personal info rows */
+.cv-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #f3f4f6; /* very light gray */
+}
+
+.cv-row:last-child {
+  border-bottom: none;
+}
+
+.cv-label {
+  font-weight: 500;
+  color: #6b7280; /* gray-500 */
+}
+
+.cv-value {
+  font-weight: 600;
+  color: #111827; /* gray-900 */
+}
+
+/* Table styling for education/experience */
+.cv-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cv-table th,
+.cv-table td {
+  border: 1px solid #e5e7eb; /* gray-200 */
+  padding: 0.5rem;
+}
+
+.cv-table th {
+  background-color: #f9fafb; /* gray-50 */
+  font-weight: 600;
+  text-align: left;
+}
+
+.cv-table td {
+  color: #374151; /* gray-700 */
+}
+
+/* Profile header */
+.cv-profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cv-profile img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #d1d5db; /* gray-300 */
+}
+
+.cv-profile-info h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.cv-profile-info p {
+  color: #6b7280;
+  margin: 2px 0;
+}

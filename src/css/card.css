@@ -1,0 +1,182 @@
+/* ---------------- Main Cards Grid ---------------- */
+.main-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Anchor tag reset */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------------- Card Base Style ---------------- */
+.card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: none;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(135deg, #4a90e2, #2962ff);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* ---------------- Gradient Colors for Cards (Cycle every 4) ---------------- */
+.card:nth-child(4n+1) { background: linear-gradient(135deg, #2962ff, #4a90e2); } /* Blue */
+.card:nth-child(4n+2) { background: linear-gradient(135deg, #ff6d00, #ff8f00); } /* Orange */
+.card:nth-child(4n+3) { background: linear-gradient(135deg, #2e7d32, #4caf50); } /* Green */
+.card:nth-child(4n+4) { background: linear-gradient(135deg, #d50000, #ff1744); } /* Red */
+
+/* ---------------- Hover effect ---------------- */
+.card:hover {
+  transform: translateY(-7px) scale(1.06);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+}
+
+/* ---------------- Light reflection animation ---------------- */
+.card::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: -10%;
+  left: -10%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.15), rgba(255,255,255,0));
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.7s ease-in-out;
+}
+
+.card:hover::before {
+  transform: rotate(45deg) scale(1);
+}
+
+/* ---------------- Inner card content ---------------- */
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.card-inner h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.card-inner p {
+  font-size: 1rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Optional icon inside card */
+.card-inner .card_icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card_icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* ---------------- Responsive ---------------- */
+@media screen and (max-width: 768px) {
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-inner h3 {
+    font-size: 1.2rem;
+  }
+  .card-inner p {
+    font-size: 0.95rem;
+  }
+  .card-inner .card_icon {
+    font-size: 2rem;
+  }
+}
+.islamic-card {
+  background: linear-gradient(135deg, #0f3d2e, #14532d);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.islamic-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/patterns/islamic-pattern.png"); /* optional */
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.islamic-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.islamic-card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.islamic-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fefce8;
+  margin-bottom: 6px;
+}
+
+.islamic-card-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: #facc15; /* gold */
+}
+
+.islamic-card-icon {
+  font-size: 36px;
+  padding: 14px;
+  border-radius: 50%;
+  background: rgba(250, 204, 21, 0.18);
+  color: #facc15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .islamic-card-title {
+    font-size: 16px;
+  }
+
+  .islamic-card-value {
+    font-size: 22px;
+  }
+
+  .islamic-card-icon {
+    font-size: 30px;
+    padding: 10px;
+  }
+}
